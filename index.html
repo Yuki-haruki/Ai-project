@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Lifecycle Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>ProductLife<span>Tracker</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Track Your Product's Complete Lifecycle</h1>
+            <p>Get accurate predictions on product lifetimes, maintenance schedules, and replacement timelines through our AI-powered analysis.</p>
+            <button class="cta-button">Get Started</button>
+        </div>
+        <div class="hero-image">
+            <img src="C:\Users\VICTUS\OneDrive\Desktop\YUKI\ai project\images.png" alt="Product Lifecycle Visualization">
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Our Features</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Lifecycle Predictions</h3>
+                <p>Get accurate predictions on how long your products will last based on usage patterns and manufacturer data.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-clock"></i>
+                <h3>Maintenance Reminders</h3>
+                <p>Never miss crucial maintenance dates with our smart reminder system.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Visual Analytics</h3>
+                <p>Visualize product lifecycle data with beautiful, interactive graphs and charts.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-robot"></i>
+                <h3>AI-Powered Chat</h3>
+                <p>Ask our AI chatbot anything about your products and get instant, accurate answers.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="graph-demo" class="graph-demo">
+        <h2>Interactive Product Lifecycle Charts</h2>
+        <p class="chart-description">Click on any product below to see its lifecycle visualization</p>
+        <div class="graph-container" style="min-height: 400px; background-color: white; display: block !important; border: 1px solid #e0e0e0; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <h3 id="chart-title" class="chart-title">Product Lifecycle Chart</h3>
+            <div id="productLifecycleChart" style="width: 100%; height: 100%;"></div>
+        </div>
+        <div class="graph-demo-controls">
+            <button class="graph-demo-button" data-product="Refrigerator" data-lifespan="13">Refrigerator</button>
+            <button class="graph-demo-button" data-product="Smartphone" data-lifespan="3">Smartphone</button>
+            <button class="graph-demo-button" data-product="Washing Machine" data-lifespan="10">Washing Machine</button>
+            <button class="graph-demo-button" data-product="Laptop" data-lifespan="5">Laptop</button>
+            <button class="graph-demo-button" data-product="Television" data-lifespan="9">Television</button>
+            <button class="graph-demo-button" data-product="Milk" data-lifespan="7" data-unit="days">Milk</button>
+            <button class="graph-demo-button" data-product="Bread" data-lifespan="7" data-unit="days">Bread</button>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How accurate are your product lifetime predictions?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our predictions are based on manufacturer data, usage patterns, and aggregated data from thousands of users. While no prediction is 100% accurate, our system typically achieves 85-95% accuracy for most consumer products.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can I track multiple products at once?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! Our platform allows you to track unlimited products across various categories. You can organize them by room, priority, or custom categories.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How does the chatbot determine product lifetimes?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our AI chatbot uses a comprehensive database of product specifications, user reviews, and manufacturer data. It also takes into account common usage patterns and environmental factors to make accurate predictions.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can I export my product data?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! You can export your data in CSV, PDF, or JSON formats at any time for your records or to share with others.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <h2>What Our Users Say</h2>
+        <div class="reviews-container">
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://via.placeholder.com/50" alt="User Avatar">
+                    <div>
+                        <h4>Sarah Johnson</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>"This app saved me thousands by helping me plan for appliance replacements before they failed. The predictions were spot on!"</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://via.placeholder.com/50" alt="User Avatar">
+                    <div>
+                        <h4>Michael Smith</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>"The chatbot is impressively knowledgeable. I asked about my refrigerator's expected lifespan and got detailed info with maintenance tips to extend it."</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://via.placeholder.com/50" alt="User Avatar">
+                    <div>
+                        <h4>Jennifer Lee</h4>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p>"The graphs make it so easy to visualize when I'll need to replace things. I love how it helps me budget for big purchases years in advance."</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>123 Product Street, Tech City, TC 12345</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>support@productlifetracker.com</p>
+                </div>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="chatbot-toggle" onclick="document.querySelector('.chatbot-container').classList.add('active');">
+        <i class="fas fa-comment"></i>
+    </div>
+
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <h3>Product Lifecycle Assistant</h3>
+            <button class="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages">
+            <div class="bot-message">
+                <p>Hello! I'm your Product Lifecycle Assistant. Ask me about any product's lifespan, maintenance needs, or when you should consider a replacement.</p>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>ProductLife<span>Tracker</span></h2>
+                <p>Making product lifecycle management simple and accessible for everyone.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">API Documentation</a></li>
+                        <li><a href="#">User Guide</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ProductLifeTracker. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Load Chart libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.36.0/dist/apexcharts.min.js"></script>
+    
+    <!-- Debug script to verify ApexCharts is working -->
+    <script>
+    // Check if ApexCharts loaded
+    console.log("ApexCharts loaded:", typeof ApexCharts !== 'undefined');
+    
+    // Create a simple test chart
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM loaded, creating test chart");
+        try {
+            // Get the chart container
+            const chartElement = document.getElementById('productLifecycleChart');
+            if (!chartElement) {
+                console.error("Chart element not found!");
+                // Create a visible error message
+                const graphContainer = document.querySelector('.graph-container');
+                if (graphContainer) {
+                    graphContainer.innerHTML += '<div style="color: red; font-weight: bold; padding: 20px;">Chart container found but chart element missing!</div>';
+                }
+            } else {
+                console.log("Chart element found:", chartElement);
+                
+                // Create a simple test chart
+                const options = {
+                    series: [{
+                        name: "Test Data",
+                        data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                    }],
+                    chart: {
+                        height: 350,
+                        type: 'line',
+                        zoom: {
+                            enabled: false
+                        }
+                    },
+                    title: {
+                        text: 'Test Chart',
+                        align: 'left'
+                    },
+                    xaxis: {
+                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                    }
+                };
+                
+                try {
+                    console.log("Creating test chart");
+                    const chart = new ApexCharts(chartElement, options);
+                    chart.render();
+                    console.log("Test chart created successfully");
+                } catch (e) {
+                    console.error("Error creating test chart:", e);
+                    // Display error in the container
+                    chartElement.innerHTML = '<div style="color: red; padding: 20px;">' + 
+                        '<strong>Error creating chart:</strong><br>' + e.message + '</div>';
+                }
+            }
+        } catch (e) {
+            console.error("Error in debug script:", e);
+        }
+    });
+    </script>
+    
+    <!-- Load Gemini API script -->
+    <script src="gemini-api.js"></script>
+    
+    <!-- Load debugging script -->
+    <script src="debug.js"></script>
+    
+    <!-- Main script and other scripts -->
+    <script>
+    // Format response text to display code blocks, lists, and links properly
+    function formatResponseText(text) {
+        if (!text) return '';
+        
+        // Format code blocks with syntax highlighting (basic version)
+        text = text.replace(/```([a-z]*)([\s\S]*?)```/g, function(match, language, code) {
+            return '<pre class="code-block"><code class="language-' + (language || 'text') + '">' + 
+                   code.trim() + '</code></pre>';
+        });
+        
+        // Format inline code
+        text = text.replace(/`([^`]+)`/g, '<code class="inline-code">$1</code>');
+        
+        // Format lists
+        text = text.replace(/^\s*[-*]\s+(.+)$/gm, '<li>$1</li>');
+        text = text.replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>');
+        
+        // Format numbered lists
+        text = text.replace(/^\s*(\d+)\.\s+(.+)$/gm, '<li>$2</li>');
+        text = text.replace(/(<li>.*<\/li>)/gs, function(match) {
+            if (!match.includes('<ul>')) return '<ol>' + match + '</ol>';
+            return match;
+        });
+        
+        // Format links
+        text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+        
+        // Format paragraphs
+        const paragraphs = text.split(/\n\s*\n/);
+        return paragraphs.map(p => {
+            if (p.trim() === '') return '';
+            if (p.includes('<pre') || p.includes('<ul') || p.includes('<ol')) return p;
+            return '<p>' + p + '</p>';
+        }).join('');
+    }
+    
+    // Ensure sendChatMessage is available
+    if (!window.sendChatMessage) {
+        window.sendChatMessage = function() {
+            console.log("Fallback sendChatMessage called from inline script");
+            const input = document.getElementById('user-input');
+            if (input && input.value.trim()) {
+                // Create and add user message
+                const messagesContainer = document.querySelector('.chatbot-messages');
+                const userMsg = document.createElement('div');
+                userMsg.className = 'user-message';
+                userMsg.innerHTML = '<p>' + input.value.trim() + '</p>';
+                messagesContainer.appendChild(userMsg);
+                
+                // Store message and clear input
+                const message = input.value;
+                input.value = '';
+                
+                // Add thinking message
+                const thinkingElement = document.createElement('div');
+                thinkingElement.classList.add('bot-message', 'thinking-message');
+                const thinkingText = document.createElement('p');
+                thinkingText.textContent = "Thinking";
+                thinkingElement.appendChild(thinkingText);
+                messagesContainer.appendChild(thinkingElement);
+                
+                // Use Gemini API
+                const formattedQuery = `You are a helpful assistant that can answer questions about any topic, but you're especially knowledgeable about product lifespans and maintenance. Please provide a helpful, accurate, and concise answer to the following question: ${message}`;
+                
+                // Check if queryGemini function exists
+                if (typeof queryGemini === 'function') {
+                    // Use the utility function
+                    queryGemini(formattedQuery)
+                        .then(response => {
+                            // Remove thinking message
+                            messagesContainer.removeChild(thinkingElement);
+                            
+                            // Clean up the response
+                            const cleanedResponse = response
+                                .replace(/^(As an AI assistant|As an AI|As a language model|As an assistant|I'm an AI|I am an AI).*?\./i, '')
+                                .replace(/^(I'm sorry|I am sorry|Sorry)[,.].*?\./i, '')
+                                .trim();
+                            
+                            // Add bot response with formatting
+                            const botMsg = document.createElement('div');
+                            botMsg.className = 'bot-message';
+                            botMsg.innerHTML = formatResponseText(cleanedResponse) || 
+                                "<p>I couldn't generate a response for that query.</p>";
+                            messagesContainer.appendChild(botMsg);
+                            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                        })
+                        .catch(error => {
+                            // Remove thinking message
+                            messagesContainer.removeChild(thinkingElement);
+                            
+                            // Add error response
+                            const botMsg = document.createElement('div');
+                            botMsg.className = 'bot-message';
+                            botMsg.innerHTML = '<p>I\'m having trouble connecting to my knowledge source right now. Please try again later.</p>';
+                            messagesContainer.appendChild(botMsg);
+                            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                            
+                            console.error("Error in inline script queryGemini:", error);
+                        });
+                } else {
+                    // Direct API call as fallback
+                    fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyDKmfBvGUhL2J4WsZhjCotBxxxYDztf9TM`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            contents: [{
+                                parts: [{ text: formattedQuery }]
+                            }]
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Remove thinking message
+                        messagesContainer.removeChild(thinkingElement);
+                        
+                        let responseText = "I couldn't generate a response for that query.";
+                        
+                        // Extract text from response
+                        if (data.candidates && 
+                            data.candidates[0] && 
+                            data.candidates[0].content && 
+                            data.candidates[0].content.parts && 
+                            data.candidates[0].content.parts[0]) {
+                            
+                            responseText = data.candidates[0].content.parts[0].text;
+                            
+                            // Clean up response
+                            responseText = responseText
+                                .replace(/^(As an AI assistant|As an AI|As a language model|As an assistant|I'm an AI|I am an AI).*?\./i, '')
+                                .replace(/^(I'm sorry|I am sorry|Sorry)[,.].*?\./i, '')
+                                .trim();
+                        }
+                        
+                        // Add bot response with formatting
+                        const botMsg = document.createElement('div');
+                        botMsg.className = 'bot-message';
+                        botMsg.innerHTML = formatResponseText(responseText);
+                        messagesContainer.appendChild(botMsg);
+                        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                    })
+                    .catch(error => {
+                        // Remove thinking message
+                        messagesContainer.removeChild(thinkingElement);
+                        
+                        // Add error response
+                        const botMsg = document.createElement('div');
+                        botMsg.className = 'bot-message';
+                        botMsg.innerHTML = '<p>I\'m having trouble connecting to my knowledge source right now. Please try again later.</p>';
+                        messagesContainer.appendChild(botMsg);
+                        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                        
+                        console.error("Error in inline script direct API call:", error);
+                    });
+                }
+                
+                return true;
+            }
+            return false;
+        };
+    }
+    
+    // Direct fix for the send button
+    document.addEventListener('DOMContentLoaded', function() {
+        // Wait a bit to ensure everything is loaded
+        setTimeout(function() {
+            console.log("Running direct fix for send button");
+            const sendBtn = document.getElementById('send-btn');
+            const userInput = document.getElementById('user-input');
+            
+            if (sendBtn) {
+                console.log("Adding direct event listener to send button");
+                sendBtn.addEventListener('click', function() {
+                    console.log("Direct send button click handler");
+                    // Check if sendMessage exists in window scope
+                    if (typeof window.sendMessage === 'function') {
+                        window.sendMessage();
+                    } else if (typeof sendMessage === 'function') {
+                        sendMessage();
+                    } else {
+                        // Fallback to sendChatMessage
+                        window.sendChatMessage();
+                    }
+                });
+            }
+            
+            if (userInput) {
+                console.log("Adding direct event listener to user input");
+                userInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        console.log("Direct enter key handler");
+                        // Check if sendMessage exists in window scope
+                        if (typeof window.sendMessage === 'function') {
+                            window.sendMessage();
+                        } else if (typeof sendMessage === 'function') {
+                            sendMessage();
+                        } else {
+                            // Fallback to sendChatMessage
+                            window.sendChatMessage();
+                        }
+                    }
+                });
+            }
+        }, 1000);
+    });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        // Critical UI fixes
+        window.addEventListener('load', function() {
+            console.log("Applying critical UI fixes");
+            
+            // Fix FAQ accordion
+            var faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(function(item) {
+                var question = item.querySelector('.faq-question');
+                if (question) {
+                    question.onclick = function(e) {
+                        console.log("FAQ question clicked (direct inline handler)");
+                        if (item.classList.contains('active')) {
+                            item.classList.remove('active');
+                        } else {
+                            // Close others
+                            document.querySelectorAll('.faq-item').forEach(function(other) {
+                                if (other !== item) other.classList.remove('active');
+                            });
+                            // Open this one
+                            item.classList.add('active');
+                        }
+                        return false;
+                    };
+                }
+            });
+            
+            // Fix chatbot close button
+            var closeButton = document.querySelector('.close-chat');
+            var chatbotContainer = document.querySelector('.chatbot-container');
+            if (closeButton && chatbotContainer) {
+                closeButton.onclick = function(e) {
+                    console.log("Close chat button clicked (direct inline handler)");
+                    chatbotContainer.classList.remove('active');
+                    return false;
+                };
+            }
+            
+            // Enhanced chart product selection
+            function activateProductChart(productName) {
+                // Find the button for this product
+                const button = document.querySelector(`.graph-demo-button[data-product="${productName}"]`);
+                if (button) {
+                    // Simulate a click on this button
+                    button.click();
+                    console.log(`Activated chart for ${productName}`);
+                    
+                    // Add some visual emphasis to the button
+                    button.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        button.style.transform = '';
+                    }, 500);
+                }
+            }
+            
+            // Add function to global scope for easy access
+            window.showProductChart = activateProductChart;
+            
+            // Activate charts for each requested product with a slight delay between each
+            setTimeout(() => activateProductChart('Smartphone'), 1000);
+            setTimeout(() => activateProductChart('Washing Machine'), 2000);
+            setTimeout(() => activateProductChart('Laptop'), 3000);
+            setTimeout(() => activateProductChart('Television'), 4000);
+            setTimeout(() => activateProductChart('Milk'), 5000);
+            setTimeout(() => activateProductChart('Bread'), 6000);
+            
+            // Add direct click handlers for buttons to make them more responsive
+            document.querySelectorAll('.graph-demo-button').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get product data
+                    const product = this.getAttribute('data-product');
+                    const lifespan = parseInt(this.getAttribute('data-lifespan'));
+                    const timeUnit = this.getAttribute('data-unit') || 'Years';
+                    
+                    console.log(`Enhanced button click: ${product}`);
+                    
+                    // Visual feedback
+                    this.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 300);
+                    
+                    // Set active class
+                    document.querySelectorAll('.graph-demo-button').forEach(otherBtn => {
+                        otherBtn.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Update description text
+                    const graphDemoText = document.querySelector('.graph-demo p');
+                    if (graphDemoText) {
+                        graphDemoText.innerHTML = timeUnit.toLowerCase() === 'days'
+                            ? `This graph shows the freshness of <strong>${product}</strong> over ${lifespan} days`
+                            : `This graph shows the lifecycle of a <strong>${product}</strong> over ${lifespan} years`;
+                    }
+                    
+                    // Update chart title
+                    const chartTitle = document.getElementById('chart-title');
+                    if (chartTitle) {
+                        chartTitle.textContent = timeUnit.toLowerCase() === 'days'
+                            ? `${product} Freshness Lifecycle (${lifespan} days)`
+                            : `${product} Performance Lifecycle (${lifespan} years)`;
+                        
+                        // Add product-specific styling to the title
+                        chartTitle.className = 'chart-title';
+                        chartTitle.classList.add(`product-${product.toLowerCase().replace(/\s+/g, '-')}`);
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        // Chart demonstration functions
+        function showProductCharts() {
+            // Create links for quick access to specific charts
+            const chartLinksContainer = document.createElement('div');
+            chartLinksContainer.className = 'chart-quick-links';
+            chartLinksContainer.innerHTML = `
+                <p>Quick access to charts:</p>
+                <div class="chart-links">
+                    <a href="#" onclick="showSmartphoneChart(); return false;">Smartphone</a>
+                    <a href="#" onclick="showWashingMachineChart(); return false;">Washing Machine</a>
+                    <a href="#" onclick="showLaptopChart(); return false;">Laptop</a>
+                    <a href="#" onclick="showTelevisionChart(); return false;">Television</a>
+                    <a href="#" onclick="showMilkChart(); return false;">Milk</a>
+                    <a href="#" onclick="showBreadChart(); return false;">Bread</a>
+                </div>
+            `;
+            
+            // Add the links container after the graph controls
+            const graphControls = document.querySelector('.graph-demo-controls');
+            if (graphControls) {
+                graphControls.parentNode.insertBefore(chartLinksContainer, graphControls.nextSibling);
+            }
+            
+            // Style the links
+            const style = document.createElement('style');
+            style.textContent = `
+                .chart-quick-links {
+                    margin-top: 30px;
+                    text-align: center;
+                }
+                .chart-links {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 10px;
+                    margin-top: 10px;
+                }
+                .chart-links a {
+                    display: inline-block;
+                    padding: 8px 15px;
+                    background-color: #f5f5f5;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    color: #333;
+                    font-weight: bold;
+                    transition: all 0.3s ease;
+                }
+                .chart-links a:hover {
+                    background-color: #e0e0e0;
+                    transform: translateY(-2px);
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // Product-specific chart functions
+        function showSmartphoneChart() {
+            const button = document.querySelector('.graph-demo-button[data-product="Smartphone"]');
+            if (button) button.click();
+            document.getElementById('graph-demo').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function showWashingMachineChart() {
+            const button = document.querySelector('.graph-demo-button[data-product="Washing Machine"]');
+            if (button) button.click();
+            document.getElementById('graph-demo').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function showLaptopChart() {
+            const button = document.querySelector('.graph-demo-button[data-product="Laptop"]');
+            if (button) button.click();
+            document.getElementById('graph-demo').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function showTelevisionChart() {
+            const button = document.querySelector('.graph-demo-button[data-product="Television"]');
+            if (button) button.click();
+            document.getElementById('graph-demo').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function showMilkChart() {
+            const button = document.querySelector('.graph-demo-button[data-product="Milk"]');
+            if (button) button.click();
+            document.getElementById('graph-demo').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function showBreadChart() {
+            const button = document.querySelector('.graph-demo-button[data-product="Bread"]');
+            if (button) button.click();
+            document.getElementById('graph-demo').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Initialize quick links after page load
+        window.addEventListener('load', showProductCharts);
+    </script>
+</body>
+</html> 
